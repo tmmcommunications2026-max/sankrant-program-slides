@@ -19,11 +19,13 @@
             align-items: center;
             min-height: 100vh;
             background: #f0f0f0;
+            padding: 10px;
         }
         
         .flyer {
-            width: 1920px;
-            height: 1080px;
+            width: 100%;
+            max-width: 1920px;
+            aspect-ratio: 16 / 9;
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
@@ -64,26 +66,33 @@
             text-align: center;
             z-index: 3;
             color: white;
-            padding: 80px 120px;
+            padding: 4vw;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .tagline {
-            font-size: 32px;
+            font-size: clamp(14px, 2vw, 32px);
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 300;
             margin-bottom: 20px;
             opacity: 0.95;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .main-text {
-            font-size: 96px;
+            font-size: clamp(40px, 10vw, 96px);
             font-weight: bold;
-            margin: 30px 0;
+            margin: 2vh 0;
             line-height: 1.1;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
             letter-spacing: -2px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .accent-line {
@@ -96,51 +105,63 @@
         
         .details {
             margin-top: 40px;
-            font-size: 28px;
+            font-size: clamp(14px, 2.5vw, 28px);
             line-height: 1.8;
             font-weight: 300;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            max-width: 90vw;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .marathi-text {
-            font-size: 36px;
+            font-size: clamp(18px, 4vw, 36px);
             font-weight: 600;
             margin-bottom: 30px;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             letter-spacing: 1px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .date {
-            font-size: 40px;
+            font-size: clamp(20px, 3vw, 40px);
             font-weight: bold;
             margin: 10px 0;
             letter-spacing: 1px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .cta {
             margin-top: 50px;
-            font-size: 24px;
+            font-size: clamp(12px, 2vw, 24px);
             letter-spacing: 2px;
             text-transform: uppercase;
             opacity: 0.9;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .logo {
             position: absolute;
             z-index: 5;
-            max-height: 140px;
+            max-height: 12vh;
+            max-width: 15vw;
             filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+            width: auto;
+            height: auto;
         }
         
         .logo-left {
-            top: 30px;
-            left: 30px;
+            top: 2vh;
+            left: 2vw;
         }
         
         .logo-right {
-            top: 30px;
-            right: 30px;
+            top: 2vh;
+            right: 2vw;
         }
         
         .header-text {
@@ -156,6 +177,9 @@
             letter-spacing: 1px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
         
         .decorative-corners {
@@ -181,24 +205,153 @@
             border-right: 3px solid rgba(255,255,255,0.6);
         }
         
+        @media (max-width: 1024px) {
+            .tagline {
+                font-size: 20px;
+            }
+            
+            .main-text {
+                font-size: 60px;
+            }
+            
+            .header-text {
+                font-size: 18px;
+                left: 120px;
+                right: 120px;
+            }
+            
+            .details {
+                font-size: 18px;
+            }
+            
+            .marathi-text {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 16px;
+            }
+            
+            .main-text {
+                font-size: 48px;
+            }
+            
+            .header-text {
+                font-size: 16px;
+                left: 80px;
+                right: 80px;
+            }
+            
+            .content {
+                padding: 40px 30px;
+            }
+            
+            .details {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            
+            .marathi-text {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .date {
+                font-size: 24px;
+            }
+            
+            .cta {
+                font-size: 16px;
+                margin-top: 30px;
+            }
+            
+            .corner-top-left,
+            .corner-bottom-right {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tagline {
+                font-size: 12px;
+            }
+            
+            .main-text {
+                font-size: 36px;
+            }
+            
+            .header-text {
+                font-size: 13px;
+                left: 50px;
+                right: 50px;
+                top: 35px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .details {
+                font-size: 13px;
+                margin-top: 15px;
+            }
+            
+            .marathi-text {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            
+            .date {
+                font-size: 18px;
+            }
+            
+            .cta {
+                font-size: 12px;
+                margin-top: 20px;
+            }
+            
+            .contact-section {
+                max-width: 22vw;
+            }
+            
+            .contact-info {
+                padding: 1.5vh 1vw;
+            }
+            
+            .corner-top-left,
+            .corner-bottom-right {
+                width: 40px;
+                height: 40px;
+                top: 20px;
+                left: 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
         .contact-section {
             position: absolute;
-            bottom: 60px;
-            right: 60px;
+            bottom: 3vh;
+            right: 3vw;
             z-index: 5;
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
             padding: 0;
             border-radius: 12px;
             text-align: center;
-            max-width: 280px;
+            max-width: 18vw;
+            min-width: 140px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             overflow: hidden;
         }
         
         .contact-photo {
             width: 100%;
-            height: 280px;
+            height: auto;
+            aspect-ratio: 1;
             border-radius: 0;
             margin: 0;
             border: none;
@@ -208,11 +361,11 @@
         }
         
         .contact-info {
-            padding: 20px 15px;
+            padding: 2vh 1.5vw;
         }
         
         .contact-name {
-            font-size: 20px;
+            font-size: clamp(14px, 2vw, 20px);
             font-weight: bold;
             color: white;
             margin-bottom: 5px;
@@ -220,7 +373,7 @@
         }
         
         .contact-label {
-            font-size: 11px;
+            font-size: clamp(10px, 1.2vw, 11px);
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.7);
             letter-spacing: 1px;
@@ -228,7 +381,7 @@
         }
         
         .contact-number {
-            font-size: 17px;
+            font-size: clamp(12px, 1.5vw, 17px);
             color: white;
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
