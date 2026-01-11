@@ -19,13 +19,11 @@
             align-items: center;
             min-height: 100vh;
             background: #f0f0f0;
-            padding: 10px;
         }
         
         .flyer {
-            width: 100%;
-            max-width: 1920px;
-            aspect-ratio: 16 / 9;
+            width: 1920px;
+            height: 1080px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
@@ -39,8 +37,7 @@
             height: 100%;
             background-image: url('https://tmmcommunications2026-max.github.io/sankrant-program-slides/jose-m-ep5lmRjOzAI-unsplash.jpg');
             background-size: cover;
-            background-position: center left;
-            background-repeat: no-repeat;
+            background-position: center;
             z-index: 1;
         }
         
@@ -50,7 +47,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.50) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.3) 100%);
             z-index: 2;
         }
         
@@ -67,33 +64,26 @@
             text-align: center;
             z-index: 3;
             color: white;
-            padding: 4vw;
-            box-sizing: border-box;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            padding: 80px 120px;
         }
         
         .tagline {
-            font-size: clamp(14px, 2vw, 32px);
+            font-size: 32px;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 300;
             margin-bottom: 20px;
-            opacity: 1;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            opacity: 0.95;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .main-text {
-            font-size: clamp(40px, 10vw, 96px);
+            font-size: 96px;
             font-weight: bold;
-            margin: 2vh 0;
+            margin: 30px 0;
             line-height: 1.1;
-            text-shadow: 4px 4px 12px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,1);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
             letter-spacing: -2px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         
         .accent-line {
@@ -106,88 +96,56 @@
         
         .details {
             margin-top: 40px;
-            font-size: clamp(14px, 2.5vw, 28px);
+            font-size: 28px;
             line-height: 1.8;
             font-weight: 300;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            max-width: 90vw;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        
-        .marathi-text {
-            font-size: clamp(18px, 4vw, 36px);
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: #fff;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
-            letter-spacing: 1px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         
         .date {
-            font-size: clamp(20px, 3vw, 40px);
+            font-size: 40px;
             font-weight: bold;
             margin: 10px 0;
             letter-spacing: 1px;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         
         .cta {
             margin-top: 50px;
-            font-size: clamp(12px, 2vw, 24px);
+            font-size: 24px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            opacity: 1;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            opacity: 0.9;
         }
         
         .logo {
             position: absolute;
             z-index: 5;
-            max-height: 12vh;
-            max-width: 15vw;
+            max-height: 140px;
             filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
-            width: auto;
-            height: auto;
         }
         
         .logo-left {
-            top: 2vh;
-            left: 2vw;
+            top: 30px;
+            left: 30px;
         }
         
         .logo-right {
-            top: 2vh;
-            right: 2vw;
-        }
-        
-        .header-text {
-            position: absolute;
-            top: 50px;
-            left: 200px;
-            right: 200px;
-            z-index: 4;
-            text-align: center;
-            color: white;
-            font-size: clamp(20px, 2.8vw, 36px);
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
-            line-height: 1.5;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            word-break: break-word;
+            top: 30px;
+            right: 30px;
         }
         
         .decorative-corners {
             position: absolute;
             z-index: 4;
+        }
+        
+        .corner-top-left {
+            top: 40px;
+            left: 40px;
+            width: 100px;
+            height: 100px;
+            border-top: 3px solid rgba(255,255,255,0.6);
+            border-left: 3px solid rgba(255,255,255,0.6);
         }
         
         .corner-bottom-right {
@@ -199,149 +157,24 @@
             border-right: 3px solid rgba(255,255,255,0.6);
         }
         
-        @media (max-width: 1024px) {
-            .tagline {
-                font-size: 20px;
-            }
-            
-            .main-text {
-                font-size: 60px;
-            }
-            
-            .header-text {
-                font-size: 18px;
-                left: 120px;
-                right: 120px;
-            }
-            
-            .details {
-                font-size: 18px;
-            }
-            
-            .marathi-text {
-                font-size: 24px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .tagline {
-                font-size: 16px;
-            }
-            
-            .main-text {
-                font-size: 48px;
-            }
-            
-            .header-text {
-                font-size: 16px;
-                left: 80px;
-                right: 80px;
-            }
-            
-            .content {
-                padding: 40px 30px;
-            }
-            
-            .details {
-                font-size: 16px;
-                margin-top: 20px;
-            }
-            
-            .marathi-text {
-                font-size: 20px;
-                margin-bottom: 15px;
-            }
-            
-            .date {
-                font-size: 24px;
-            }
-            
-            .cta {
-                font-size: 16px;
-                margin-top: 30px;
-            }
-            
-            .corner-bottom-right {
-                width: 60px;
-                height: 60px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .tagline {
-                font-size: 12px;
-            }
-            
-            .main-text {
-                font-size: 36px;
-            }
-            
-            .header-text {
-                font-size: 13px;
-                left: 50px;
-                right: 50px;
-                top: 35px;
-            }
-            
-            .content {
-                padding: 30px 20px;
-            }
-            
-            .details {
-                font-size: 13px;
-                margin-top: 15px;
-            }
-            
-            .marathi-text {
-                font-size: 16px;
-                margin-bottom: 10px;
-            }
-            
-            .date {
-                font-size: 18px;
-            }
-            
-            .cta {
-                font-size: 12px;
-                margin-top: 20px;
-            }
-            
-            .contact-section {
-                max-width: 22vw;
-            }
-            
-            .contact-info {
-                padding: 1.5vh 1vw;
-            }
-            
-            .corner-bottom-right {
-                width: 40px;
-                height: 40px;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-        
         .contact-section {
             position: absolute;
-            bottom: 3vh;
-            right: 3vw;
+            bottom: 60px;
+            right: 60px;
             z-index: 5;
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
             padding: 0;
             border-radius: 12px;
             text-align: center;
-            max-width: 12vw;
-            min-width: 100px;
+            max-width: 280px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             overflow: hidden;
         }
         
         .contact-photo {
             width: 100%;
-            height: auto;
-            aspect-ratio: 1;
+            height: 280px;
             border-radius: 0;
             margin: 0;
             border: none;
@@ -351,11 +184,11 @@
         }
         
         .contact-info {
-            padding: 2vh 1.5vw;
+            padding: 20px 15px;
         }
         
         .contact-name {
-            font-size: clamp(14px, 2vw, 20px);
+            font-size: 20px;
             font-weight: bold;
             color: white;
             margin-bottom: 5px;
@@ -363,7 +196,7 @@
         }
         
         .contact-label {
-            font-size: clamp(10px, 1.2vw, 11px);
+            font-size: 11px;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.7);
             letter-spacing: 1px;
@@ -371,7 +204,7 @@
         }
         
         .contact-number {
-            font-size: clamp(12px, 1.5vw, 17px);
+            font-size: 17px;
             color: white;
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -386,9 +219,8 @@
         <img src="https://tmmcommunications2026-max.github.io/sankrant-program-slides/bmm-2026.jpg" alt="Logo Left" class="logo logo-left">
         <img src="https://tmmcommunications2026-max.github.io/sankrant-program-slides/bmm.jpg" alt="Logo Right" class="logo logo-right">
         
-        <div class="header-text">You are cordially invited to BMM Convention 2026</div>
-        
         <div class="decorative-corners">
+            <div class="corner-top-left"></div>
             <div class="corner-bottom-right"></div>
         </div>
         
@@ -402,15 +234,16 @@
         </div>
         
         <div class="content">
+            <div class="tagline">You are cordially invited</div>
+            
             <div class="main-text">SAVE THE DATE</div>
             
             <div class="accent-line"></div>
             
             <div class="details">
-                <div class="marathi-text">जपूया संस्कृती, विणूया नाती!</div>
-                <div style="font-size: 24px; margin-bottom: 20px;">Join us for a grand four-day celebration of Marathi heritage, arts, and community.</div>
-                <div class="date">August 6 – August 9, 2026</div>
-                <div style="margin-top: 20px;">Seattle Convention Center | Arch Building</div>
+                <div class="date">[Date Goes Here]</div>
+                <div>[Time Goes Here]</div>
+                <div style="margin-top: 20px;">[Location Goes Here]</div>
             </div>
             
             <div class="cta">More Details Coming Soon</div>
