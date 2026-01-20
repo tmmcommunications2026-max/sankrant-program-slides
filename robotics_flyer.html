@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Program</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .flyer-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .register-link {
+            position: absolute;
+            bottom: 12%;
+            left: 78%;
+            transform: translateX(-50%);
+            width: 34%;
+            height: 8%;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            background-color: rgba(0, 0, 0, 0);
+            border: 2px solid rgba(0, 0, 0, 0);
+        }
+
+        .register-link:hover {
+            opacity: 0.8;
+        }
+
+        .info-box {
+            position: absolute;
+            right: 5%;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 30%;
+            height: 50%;
+            background-color: transparent;
+            border: 3px solid #2c5aa0;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-box p {
+            color: #fff;
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .flyer-container {
+                max-width: 100%;
+            }
+
+            .info-box {
+                width: 90%;
+                left: 5%;
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .info-box p {
+                font-size: 0.85em;
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .info-box {
+                padding: 12px;
+            }
+
+            .info-box p {
+                font-size: 0.75em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer-container">
+        <img src="https://tmmcommunications2026-max.github.io/sankrant-program-slides/robotics.jpg" 
+             alt="Robotics Program" 
+             class="background-image">
+        
+        <!-- Info box with program details -->
+        <div class="info-box">
+            <p>Is your child interested in learning about robots and STEM as a whole? This free and online opportunity is for you! These classes will be on Sundays at 6:00 pm EST and we will explore various topics in STEM such as how triangles support structures, and so much more! In addition, your child will get to learn about FIRST Robotics and see multiple LIVE robot demonstrations! We will also have industry professionals join meetings from time to time to run an activity with the kids once a month :)</p>
+        </div>
+        
+        <!-- Clickable area for "Register Here" -->
+        <a href="https://forms.gle/AEtjcdcAnfbAQtp88" class="register-link" title="Register Here"></a>
+    </div>
+</body>
+</html>
